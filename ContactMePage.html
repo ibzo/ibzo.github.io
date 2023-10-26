@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="PageBasics.css">
+        <link rel="stylesheet" type="text/css" href="ContactMePage.css">
+        <link rel="icon" type="image/png" href="Images/IBGoofy%20Profile%20Pic.png">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <title>Ibrahim's Portfolio</title>
+    </head>
+    
+    <body>
+        <nav>
+            <img id="logo" src="Images/Programmer%20Logo.png">
+            <div id="NavID">
+                <h1>Ibrahim Sillah</h1>
+                <h1><small><i>Game Programmer</i></small></h1>
+            </div>
+
+            <!--Navi Bar-->
+            <ul>
+                <li><a href="Index.html">About Me</a></li>
+                <li><a href="Documents/Ibrahim Sillah's CV.pdf">CV</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a class="active" href="ContactMePage.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        
+        <div id="socials">
+            <div id="socialInfo">
+                <div class="heading">Social Media</div>
+                <a href="www.linkedin.com/in/ibrahimsillah"><img class="socialImg" src="Images/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        
+        <form id="contactForm" action="https://formspree.io/ibrahimsillah26@yahoo.com" method="POST">
+            
+            <div id="contact">
+                <div id="sendMessage" class="heading">Send Ibrahim A Message</div>
+                
+                <input type="text" name="name" id="name" class="textbox" placeholder="Full Name">
+
+                <input style="float: right" type="email" name="email" id="email" class="textbox" placeholder="Email Address">
+
+                <textarea name="message" id="message" class="textarea" placeholder="Message"></textarea>
+                
+                <div id="status"></div>
+
+                <input id="submit" type="submit">
+            </div>
+            
+        </form>
+    </body>
+    <script>
+        console.log("It works")
+        
+        $(document).ready(function() {
+            $("#submit").click(function (event) {
+                console.log("clicked button")
+                
+                var email = $("#email").val()
+                var name = $("#name").val()
+                var message = $("#message").val()
+                var statusElm = $("#status")
+                statusElm.empty()
+                
+                if(email.length > 5 && email.includes("@") && email.includes(".")){
+                    statusElm.append("<div>Email is valid</div>")
+                }else{
+                    event.preventDefault()
+                    statusElm.append("<div>Email is not valid</div>")
+                }
+                
+                if(name.length > 2){
+                    statusElm.append("<div>Name is valid</div>")
+                }else{
+                    event.preventDefault()
+                    statusElm.append("<div>Name is not valid</div>")
+                }
+                
+                if(message.length > 5){
+                    statusElm.append("<div>Message is valid</div>")
+                }else{
+                    event.preventDefault()
+                    statusElm.append("<div>Message is not valid</div>")
+                }
+            })
+                          })
+    </script>
+</html>

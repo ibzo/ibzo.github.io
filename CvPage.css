@@ -1,0 +1,124 @@
+CV{
+    font-family: monospace;
+    padding: 20px;
+}
+
+Info{
+    font-size: 20px;
+    text-align: center;
+}
+
+#email{
+    color: black;
+}
+
+#email:hover{
+    color: white;
+}
+
+hr{
+    border: 1px solid black;
+    position: relative;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#profile{
+    width: 65%;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+}
+
+#profileInfo{
+    font-size: 15px;
+    padding: 15px 20px 18px 20px;
+}
+
+#skills{
+    width: 35%;
+    text-align: center;
+    float: left;
+    
+    position: relative;
+    padding: 0px 0px 0px 0px;
+}
+
+.skillsTable{
+    padding: 3px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+#verticalLine{
+    width: 0.5px;
+    border-bottom: 154px solid black;
+    position: absolute;
+    top: 175px;
+    left: 65%;
+}
+
+.sectionHead{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
+
+#eduTable{
+    position: relative;
+    left: 5%;
+    margin: 20px 0px 20px 0px;
+    
+    table-layout: auto;
+    width: 90%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.job{
+    font-weight: bold;
+    float: left;
+}
+
+.jobDate{
+    position: relative;
+    left: 50px;
+    width: 400px;
+}
+
+.company{
+    font-style: italic;
+}
+
+Experience li, Achievements li, ExtraActivities li, Interests li{
+    position: relative;
+    left: 20px;
+    width: 95%;
+}
+
+Experience, Achievements, ExtraActivities, Interests{
+    font-size: 15px;
+    
+}
+
+.achievement, .activities, .interest{
+    font-weight: bold;
+}
+
+.data{
+    padding: 20px;
+}
+
+

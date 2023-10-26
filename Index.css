@@ -1,0 +1,64 @@
+#highlights{
+    padding: 50px;
+}
+
+#highlights video{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    
+    margin: 10px;
+}
+
+#pageTitle{
+    padding: 20px;
+    margin-top: 20px;
+
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#description p{
+    position: relative;
+    padding: 15px;
+    
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
+
+#description{
+    padding-top: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#leftMarginImg{
+    position: relative;
+    float: left;
+    top: -90px;
+
+    width: 200px;
+}
+
+#rightMarginImg{
+    position: relative;
+    float: right;
+    top: -90px;
+
+    width: 200px;
+}
+
+#hyperlink{
+    text-decoration: none;
+    color: brown;
+}
+
+#hyperlink:hover{
+    color: black;
+}

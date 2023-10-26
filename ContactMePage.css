@@ -1,0 +1,96 @@
+.heading{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    font-family: monospace;
+}
+
+#socials{
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 50px;
+    
+    text-align: center;
+}
+
+#socialInfo{
+    width: 400px;
+    position: relative;
+    float: right;
+    right: 10%;
+}
+
+.socialImg{
+    width: 80px;
+    height: auto;
+    position: relative;
+    margin: 30px;
+}
+
+#contactForm{
+    position: relative;
+    float: left;
+    top: 50px;
+    width: 50%;
+}
+
+#sendMessage{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#contact{
+    position: absolute;
+    left: 25%;
+    width: 380px;
+    text-align: center;
+}
+
+.textbox{
+    width: 176px;
+    height: 50px;
+    float: left;
+    box-shadow: 3px 3px 6px black;
+    
+    font-size: 15px;
+}
+
+.textarea{
+    position: relative;
+    width: 368px;
+    height: 200px;
+    box-shadow: 3px 3px 6px black;
+    
+    font-size: 15px;
+}
+
+input, textarea{
+    margin: 5px;
+    border-radius: 10px;
+}
+
+input:hover, textarea:hover{
+    background-color: #b9b9b9;
+}
+
+#status{
+    color: red;
+}
+
+#submit{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px black;
+    
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: green;
+}
+
+#submit:hover{
+    background-color: blue;
+}

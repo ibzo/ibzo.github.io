@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="PageBasics.css">
+        <link rel="stylesheet" type="text/css" href="Game_Chickshot.css">
+        <link rel="icon" type="image/png" href="Images/IBGoofy%20Profile%20Pic.png">
+        <title>Ibrahim's Portfolio</title>
+    </head>
+    
+    <body>
+        <nav>
+            <img id="logo" src="Images/Programmer%20Logo.png">
+            <div id="NavID">
+                <h1>Ibrahim Sillah</h1>
+                <h1><small><i>Game Programmer</i></small></h1>
+            </div>
+
+            <!--Navi Bar-->
+            <ul>
+                <li><a href="AboutMePage.html">About Me</a></li>
+                <li><a href="Documents/Ibrahim Sillah's CV.pdf">CV</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="ContactMePage.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <div id="projectDesc">
+            <h1 id="projectTitle">CHICKSHOT</h1>
+            <br>
+            <h2>Software: Unity</h2 >
+            <h2>Language: C#</h2>
+            <h2>Genre: Networked Shooter</h2>
+            <br>
+            <p id="projectSummary">
+                This project is a solo project, with a single player mode as well as a networked multiplayer mode, where I 
+                used photon to host the game. The game is still very much early in development, with few more features to add.
+            </p>
+            <br>
+            <p id="projectSummary">
+                The game allows the character to play as a chicken, in a battle against enemy chickens. Currently, the single 
+                player mode is close to completion, with a few bugs to fix. The multiplayer mode is still in development, 
+                so far having one level. The main focus on this project is working on the networked features.
+            </p>
+        </div>
+
+        <div id="projectGallery">
+            <img src="Images/Chickshot Icon.png" width="200px">
+            <img src="Images/Chickshot Icon.png" width="200px">
+            <img src="Images/Chickshot Icon.png" width="200px">
+            <img src="Images/Chickshot Icon.png" width="200px">
+        </div>
+
+        <article id="projectDoc">
+            <h2>Highlights</h2>
+
+            <br>
+
+            <h3>Player Move & Shoot</h3>
+
+            <img src="Images/ChickshotScrnShots/Code/The 'Update()' Function.png">
+            <img src="Images/ChickshotScrnShots/Code/'Move()' Method.png">
+            <img src="Images/ChickshotScrnShots/Code/'Fire()' Method.png">
+
+            <p>
+                Move() is called in the update() method within the player script to allow the player to move the character 
+                around in any frame when initiate a move input. The character model will rotate to the direction it is 
+                moving in, so that the model is moving forward. When the player presses the space key, the fire() method is 
+                called. Everytime the player fires a bullet, there is a cooldown to regulate when the player can fire again. 
+                nextFireTime is the condition which the code uses so the player cannot spam fire. After a shot, nextFireTime 
+                equates to the current time elapsed plus the FireRate. So the next shot can only be fired when nextFireTime 
+                is less than the elapsed time. Next, the bullet prefab is instantiated in the bullet position (which is 
+                always infront of the player model). A shooting sound and a gunsmoke VFX are also played to show the bullet 
+                being shot. Now that the player has been implemented, the next obvious step was to have a bullet that not 
+                only appears, but travels in the direction it was shot until it hits something.
+            </p>
+
+            <img src="Images/ChickshotScrnShots/Code/Bullet Script.png">
+
+            <p>
+                I implemented the bullet such that it would continue to travel in the original direction it was shot. But of 
+                course, the bullet must hit something, whether that be an enemy, another player, or the outer wall. So I 
+                used OnCollisionEnter() so that if anything enters the bullet's collision box, it would be destroyed. There 
+                would be a sound and VFX when the bullet is destroyed to emphasize the end of the bullet's path.
+            </p>
+            
+            <br>
+            <!--
+
+            <h3>Camera</h3>
+
+            <p>
+                It is good for the player to move and shoot. But what good is it if you cannot see them as they move around 
+                the map. For this purpose, I made a script for the camera.
+            </p>
+
+            <img>
+            
+            <p>
+                offset value is the difference between the position of the player and the camera. This is sorted out in the 
+                start() function. This is exactly how it will remain throughout, by making the camera position equal to the 
+                player position, then adding the offset. This is done at every frame, keep the camera constantly.
+            </p>
+
+            <br>
+
+            -->
+            
+            <h3>Enemy</h3>
+            
+            <p>
+                Of course, when it comes to a shooter, you have to have an enemy to aim and shoot at. So I created some 
+                enemies. I started off in a similar manner to the player, but I added a simple enemy AI, which would keep 
+                an enemy idle until the player is close enough. Then the enemy would turn towards the player and begin to 
+                fire bullets are a slow rate.
+            </p>
+
+            <img src="Images/ChickshotScrnShots/Code/Enemy OnTriggerStay().png">
+            <img src="Images/ChickshotScrnShots/Code/Enemy 'Fire()' Method.png">
+
+            <br>
+
+            <h3>Health & Damage</h3>
+
+            <p>
+                Now that both the enemy and player could shoot, it was time to implement health and damage. I started with 
+                the enemy, making sure that when the player's bullet enters an enemy's collision box, it would call the 
+                TakeDamage() method. This is where the damage value assigned to the projectile will be taken away from the 
+                enemy health. If the health value had reached 0, it would call the EnemyDied() method and that enemy will 
+                be destroyed.
+            </p>
+
+            <img src="Images/ChickshotScrnShots/Code/Enemy damage mechanic.png">
+            
+            <p>
+                That also means that the same must be done if the player takes too much damage. If the player dies, the game 
+                object is deleted.
+            </p>
+
+            <img src="Images/ChickshotScrnShots/Code/Player damage mechanic.png">
+
+            <p>
+                I am yet to implement a game over screen, where the player will be able to restart the game or return back 
+                to the main menu.
+            </p>
+        </article>>
+
+
+    </body>
+</html>
