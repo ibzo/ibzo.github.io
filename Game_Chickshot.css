@@ -25,13 +25,6 @@
     border: 5px solid whitesmoke;
     border-radius: 50%;
     margin: 10px;
-
-    /*
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    */
 }
 
 #projectDoc{
@@ -44,6 +37,12 @@
 
 #projectDoc img{
     width: 300px;
+}
+
+#projectDoc img:hover{
+    transform: scale(2);
+    position: relative;
+    left: 100px;
 }
 
 #projectDoc h2{
