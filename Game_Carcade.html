@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="PageBasics.css">
+        <link rel="stylesheet" type="text/css" href="Game_Carcade.css">
+        <link rel="icon" type="image/png" href="Images/IBGoofy%20Profile%20Pic.png">
+        <title>Ibrahim's Portfolio</title>
+    </head>
+    
+    <body>
+        <nav>
+            <img id="logo" src="Images/Programmer%20Logo.png">
+            <div id="NavID">
+                <h1>Ibrahim Sillah</h1>
+                <h1><small><i>Game Programmer</i></small></h1>
+            </div>
+
+            <!--Navi Bar-->
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="Documents/Ibrahim Sillah's CV.pdf">CV</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="ContactMePage.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <div id="projectDesc">
+            <h1 id="projectTitle">CARCADE</h1>
+            <br>
+            <h2>Software: Visual Studio</h2 >
+            <h2>Language: OpenGL(FreeGLUT), C++</h2>
+            <h2>Genre: Arcade</h2>
+            <br>
+            <p id="projectSummary">
+                This project is a solo project, made in Visual Studio with C++ (OpenGL, FreeGLUT library). It is a simple 
+                arcade game, taking inspiration from the likes of Asteroids, Pac-Man and Space Invaders.
+            </p>
+            <br>
+            <p id="projectSummary">
+                The game allows the player to control a car. The player starts at the red gate and has to drive to the opposite 
+                green gate, making sure they avoid all the obstacles in their way. They are given points when they reach the 
+                green gate, but points are taken away if they crash into an obstacle.
+            </p>
+        </div>
+
+        <div id="projectGallery">
+            <img src="Images/CARCADE/Gameplay SS.png" width="200px" height="200px">
+            <img src="Images/CARCADE/Level Complete Screen.png" width="200px" height="200px">
+            <img src="Images/CARCADE/Car Crash Frame.png" width="200px" height="200px">
+        </div>
+
+        <article id="projectDoc">
+            <h2>Highlights</h2>
+
+            <br>
+
+            <h3>Player Movement</h3>
+
+            <p>
+                I had some difficulty implementing the movement due to the nature of OpenGL. Since I had to provide all the 
+                vertices for the car, I had to make calculations of how the car would respond to certain actions the player 
+                would input and draw a new car accordingly. 
+            </p>
+
+            <img src="Images/CARCADE/drawCar Method pt1.png">
+            <img src="Images/CARCADE/drawCar Method pt2.png">
+            <img src="Images/CARCADE/display method (draw car).png">
+            <img src="Images/CARCADE/player controls.png">
+
+            <br>
+            <br>
+            
+            <h3>Collisions</h3>
+
+            <p>
+                The next challenge for me was collisions. As the car driving around alone would be boring, I added obstacles 
+                which the player would have to avoid. The car would first have to spawn in a clear area. I drew an invisible 
+                border around the car to detect collisions with nearby obstacles, to avoid the car spawning on top of them. 
+                I used this method every time I wanted to check the car's surroundings for obstacles.
+            </p>
+
+            <img src="Images/CARCADE/display method (new game).png">
+            <img src="Images/CARCADE/checkCarCollision method.png">
+            <img src="Images/CARCADE/display method (check car collision).png">
+
+            <p>
+                Drawing the obstacles was the same as drawing the car. The difference was that the obstacles were stationary but 
+                were spawned at random (as well as multiple obstacles). This was difficult to implement as it meant that I had 
+                to randomly spawn the obstacles, and if they collided with anything in the level bounds, they would have to be 
+                redrawn.
+            </p>
+
+            <img src="Images/CARCADE/drawObject method.png">
+            <img src="Images/CARCADE/display method (make random objects).png">
+            <img src="Images/CARCADE/display method (draw objects).png">
+            <img src="Images/CARCADE/checkObjCollision method.png">
+
+        </article>>
+
+
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="PageBasics.css">
+        <link rel="stylesheet" type="text/css" href="Game_MazeShooter.css">
+        <link rel="icon" type="image/png" href="Images/IBGoofy%20Profile%20Pic.png">
+        <title>Ibrahim's Portfolio</title>
+    </head>
+    
+    <body>
+        <nav>
+            <img id="logo" src="Images/Programmer%20Logo.png">
+            <div id="NavID">
+                <h1>Ibrahim Sillah</h1>
+                <h1><small><i>Game Programmer</i></small></h1>
+            </div>
+
+            <!--Navi Bar-->
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="Documents/Ibrahim Sillah's CV.pdf">CV</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="ContactMePage.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <div id="projectDesc">
+            <h1 id="projectTitle">MAZESHOOTER</h1>
+            <br>
+            <h2>Software: Unity</h2 >
+            <h2>Language: C#</h2>
+            <h2>Genre: 2D, Shooter</h2>
+            <br>
+            <p id="projectSummary">
+                This is a solo project made with C# in unity. MazeShooter is a single player game I made as a simple project 
+                to test out procedural terrain generation. I also have the intention of implementing pathfinding algorithms 
+                to apply to the AI in further development.
+            </p>
+            <br>
+            <p id="projectSummary">
+                The game is still in early development. The features mentioned are currently being implemented alongside 
+                other features, including increasing difficulty of the game, variety of levels (possible even larger), etc.
+            </p>
+        </div>
+
+        <div id="projectGallery">
+            <img src="Images/MazeShooter/MazeShooter Icon.png" width="200px" height="200px">
+            <img src="Images/MazeShooter/MazeShooter Gameplay.png" width="200px" height="200px">
+            <img src="Images/MazeShooter/MazeShooter Gameplay 2.png" width="200px" height="200px">
+        </div>
+
+        <article id="projectDoc">
+            <h2>Highlights</h2>
+
+            <br>
+
+            <h3>AI</h3>
+
+            <p>
+                AI is usally the most difficult part for me to implement, as it can be hard to find existing bugs 
+                in it's code. I find testing to be much more time consuming and usual. The game is still in early 
+                development, however I have already encounter some issues in attempting to code the patrol, attack 
+                and search status of the enemy. 
+            </p>
+            <br>
+            <p>
+                The enemy should randomly patrol. When the player is in sight, it's status should change to attack, 
+                where it follows the player at a certain distance, whilst shooting. If the player evades the enemy's 
+                line of sight, it will stop to search for the player. If it fails to find the player, it returns to 
+                it's patrol. 
+            </p>
+            <br>
+            <p>
+                I am currently unable to show my code, but I hope to soon be able to show the fruits of my labour.
+            </p>
+
+            <br>
+            <br>
+
+            <h3>Shooting Mechanics</h3>
+
+            <p>
+                When programming the mechanics for shooting, I had to ensure that the bullet prefabs were initialised 
+                as the shoot method is called. The player and enamy bullets have different characteristics, so 
+                I had to specifically load the appropriate script.
+            </p>
+            <br>
+            <p>
+                In addition, I did not want too many bullets on screen at once. So I set a fire rate for both the player 
+                and the enemy. A bullet would not be able to be shot, unless the accumulated time since the last shot 
+                had reached the rate rate time.
+            </p>
+
+            <img src="Images/MazeShooter/Player Fire Mechanic.png">
+            <img src="Images/MazeShooter/Player Fire Rate.png">
+
+            <br>
+            <br>
+
+            <h3>Environmental Movement</h3>
+
+            <p>
+                As the player moves around, they will come across different surfaces in the environment. They have 
+                different properties, so some will slow down the one walking on that tile. As the player moves around, 
+                if the collision box they enter belongs to a specific tile, the speed modifier on that tile will be 
+                applied to the speed of the player. Each tile has a tag to identify it.
+            </p>
+
+            <img src="Images/MazeShooter/Environment Collision.png">
+            <img src="Images/MazeShooter/Environment Editor Tags.png">
+
+        </article>>
+
+
+    </body>
+</html>

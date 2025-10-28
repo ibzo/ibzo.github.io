@@ -25,6 +25,13 @@
     border: 5px solid whitesmoke;
     border-radius: 50%;
     margin: 10px;
+
+    /*
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    */
 }
 
 #projectDoc{

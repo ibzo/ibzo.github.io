@@ -1,6 +1,6 @@
 @keyframes aniBackground {
     0%  {background-color: gray;}
-    100% {background-color: rgb(65, 65, 65);}
+    100% {background-color: rgb(170, 170, 170);}
 }
 
 *{
